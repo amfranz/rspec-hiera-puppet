@@ -6,8 +6,7 @@ class Hiera
       end
 
       def lookup(key, scope, order_override, resolution_type)
-        answer = Backend.empty_answer(resolution_type)
-
+        answer = nil
         Hiera.debug("Looking up #{key} in RSpec backend")
 
         Backend.datasources(scope, order_override) do |source|
@@ -35,10 +34,10 @@ class Hiera
           case resolution_type
           when :array
             raise Exception, "Hiera type mismatch: expected Array and got #{new_answer.class}" unless new_answer.kind_of? Array or new_answer.kind_of? String
-            answer << new_answer
+            answer = new_answer
           when :hash
             raise Exception, "Hiera type mismatch: expected Hash and got #{new_answer.class}" unless new_answer.kind_of? Hash
-            answer = new_answer.merge answer
+            answer = new_answer
           else
             answer = new_answer
             break
