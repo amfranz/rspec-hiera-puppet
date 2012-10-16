@@ -106,7 +106,6 @@ demonstrates the use of a shared context.
 
   _spec/spec\_helper.rb_
 
-    require 'rspec-hiera'
     require 'rspec-hiera-puppet'
 
     fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
