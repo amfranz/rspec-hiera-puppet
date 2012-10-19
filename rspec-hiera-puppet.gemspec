@@ -15,9 +15,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Rspec::Hiera::Puppet::VERSION
 
-  gem.add_dependency('puppet', '>= 2.7')
-  gem.add_dependency('hiera', '>= 0.3')
-  gem.add_dependency('hiera-puppet', '>= 0.3')
+  gem.add_dependency('puppet', '>= 3.0')
+  gem.add_dependency('hiera', '>= 1.0')
+  gem.add_dependency('hiera-puppet', '>= 1.0')
   gem.add_dependency('rspec')
   gem.add_dependency('rspec-puppet')
 end
