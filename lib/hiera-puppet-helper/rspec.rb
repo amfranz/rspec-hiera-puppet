@@ -1,6 +1,6 @@
 require 'rspec'
 
-module RSpecHieraPuppet
+module HieraPuppetHelper
   module HieraDefaultConfiguration
     extend RSpec::SharedContext
 
@@ -12,7 +12,7 @@ module RSpecHieraPuppet
 end
 
 RSpec.configure do |c|
-  c.include(RSpecHieraPuppet::HieraDefaultConfiguration)
+  c.include(HieraPuppetHelper::HieraDefaultConfiguration)
 
   c.before(:each) do
     Thread.current[:spec] = self
