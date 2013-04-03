@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/rspec-hiera-puppet/version', __FILE__)
+require File.expand_path('../lib/hiera-puppet-helper/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Maarten Thibaut"]

@@ -1,4 +1,4 @@
-# Rspec::Hiera::Puppet
+# Hiera::Puppet::Helper
 
 Hiera fixtures for puppet-rspec tests.
 
@@ -6,7 +6,7 @@ Hiera fixtures for puppet-rspec tests.
 
 Add this line to your application's Gemfile:
 
-    gem 'rspec-hiera-puppet'
+    gem 'hiera-puppet-helper'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rspec-hiera-puppet
+    $ gem install hiera-puppet-helper
 
 ## Usage
 
@@ -25,7 +25,7 @@ The following assumes that you are already be familiar with
 
 To use this gem add the following include to spec/spec\_helper.rb:
 
-    require 'rspec-hiera-puppet'
+    require 'hiera-puppet-helper'
 
 For the purpose of demonstrating a Hiera fixture, lets assume there is the
 following contrived example of a Puppet class:
@@ -106,7 +106,7 @@ demonstrates the use of a shared context.
 
   _spec/spec\_helper.rb_
 
-    require 'rspec-hiera-puppet'
+    require 'hiera-puppet-helper'
 
     fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
 
