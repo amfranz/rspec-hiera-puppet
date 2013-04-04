@@ -14,10 +14,4 @@ Gem::Specification.new do |gem|
   gem.name          = "hiera-puppet-helper"
   gem.require_paths = ["lib"]
   gem.version       = Hiera::Puppet::Helper::VERSION
-
-  gem.add_dependency('puppet')
-  gem.add_dependency('hiera')
-  gem.add_dependency('hiera-puppet', '>= 1.0')
-  gem.add_dependency('rspec')
-  gem.add_dependency('rspec-puppet')
 end
