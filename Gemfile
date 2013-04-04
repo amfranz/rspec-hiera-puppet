@@ -14,7 +14,5 @@ else
   gem 'puppet', :require => false
 end
 
-puppet
-
 gem 'hiera'
 gem 'hiera-puppet', '>= 1.0'
