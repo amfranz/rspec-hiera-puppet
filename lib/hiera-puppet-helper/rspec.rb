@@ -3,7 +3,6 @@ require 'rspec'
 module HieraPuppetHelper
   module HieraDefaultConfiguration
     extend RSpec::SharedContext
-
     let(:hiera_config) do
       { :backends => ['rspec'],
         :rspec => respond_to?(:hiera_data) ? hiera_data : {} }
