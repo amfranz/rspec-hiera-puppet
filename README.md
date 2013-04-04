@@ -18,6 +18,8 @@ Or install it yourself as:
 
 ## Usage
 
+Note: you can find a working example inside the example/ directory of this gem.
+
 ### Basic
 
 The following assumes that you are already be familiar with
