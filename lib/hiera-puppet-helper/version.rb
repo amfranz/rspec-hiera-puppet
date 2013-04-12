@@ -1,7 +1,3 @@
-module Hiera
-  module Puppet
-    module Helper
+module HieraPuppetHelper
       VERSION = "1.0.1"
-    end
-  end
 end

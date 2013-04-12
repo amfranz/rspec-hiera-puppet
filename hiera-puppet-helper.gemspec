@@ -13,5 +13,5 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "hiera-puppet-helper"
   gem.require_paths = ["lib"]
-  gem.version       = Hiera::Puppet::Helper::VERSION
+  gem.version       = HieraPuppetHelper::VERSION
 end
