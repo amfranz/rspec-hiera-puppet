@@ -1,4 +1,6 @@
-# Rspec::Hiera::Puppet
+# Hiera::Puppet::Helper
+
+[![Build Status](https://travis-ci.org/mthibaut/hiera-puppet-helper.png?branch=master)](https://travis-ci.org/mthibaut/hiera-puppet-helper)
 
 Hiera fixtures for puppet-rspec tests.
 
@@ -6,7 +8,7 @@ Hiera fixtures for puppet-rspec tests.
 
 Add this line to your application's Gemfile:
 
-    gem 'rspec-hiera-puppet'
+    gem 'hiera-puppet-helper'
 
 And then execute:
 
@@ -14,9 +16,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rspec-hiera-puppet
+    $ gem install hiera-puppet-helper
 
 ## Usage
+
+* If you plan to use multiple hiera_config contexts or assign different values
+to the hiera_data variable, then you *must put the tests in different files*.
+* Use hiera-puppet-helper < 2.0.0 for puppet versions < 3.0.0
+
+Note: you can find a working example inside the example/ directory of this gem.
 
 ### Basic
 
@@ -25,7 +33,7 @@ The following assumes that you are already be familiar with
 
 To use this gem add the following include to spec/spec\_helper.rb:
 
-    require 'rspec-hiera-puppet'
+    require 'hiera-puppet-helper'
 
 For the purpose of demonstrating a Hiera fixture, lets assume there is the
 following contrived example of a Puppet class:
@@ -100,13 +108,13 @@ look up data. The following example combine both the 'rspec' backend, and the
       it { should contain_notify("foo").with_message("bar") }
     end
 
-To avoid having to copy-paste the Hier configuration into each and every spec,
+To avoid having to copy-paste the Hiera configuration into each and every spec,
 you can use a shared context. The following is a full-featured example that
 demonstrates the use of a shared context.
 
   _spec/spec\_helper.rb_
 
-    require 'rspec-hiera-puppet'
+    require 'hiera-puppet-helper'
 
     fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
 

@@ -1,9 +1,8 @@
 require 'rspec'
 
-module RSpecHieraPuppet
+module HieraPuppetHelper
   module HieraDefaultConfiguration
     extend RSpec::SharedContext
-
     let(:hiera_config) do
       { :backends => ['rspec'],
         :rspec => respond_to?(:hiera_data) ? hiera_data : {} }
@@ -12,7 +11,7 @@ module RSpecHieraPuppet
 end
 
 RSpec.configure do |c|
-  c.include(RSpecHieraPuppet::HieraDefaultConfiguration)
+  c.include(HieraPuppetHelper::HieraDefaultConfiguration)
 
   c.before(:each) do
     Thread.current[:spec] = self
