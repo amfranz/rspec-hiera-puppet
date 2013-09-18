@@ -20,10 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-Note: you can find a working example inside the example/ directory of this gem.
-
-If you plan to use multiple hiera_config contexts or assign different values
+* If you plan to use multiple hiera_config contexts or assign different values
 to the hiera_data variable, then you *must put the tests in different files*.
+* Use hiera-puppet-helper < 2.0.0 for puppet versions < 3.0.0
+
+Note: you can find a working example inside the example/ directory of this gem.
 
 ### Basic
 
