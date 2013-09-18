@@ -22,6 +22,9 @@ Or install it yourself as:
 
 Note: you can find a working example inside the example/ directory of this gem.
 
+If you plan to use multiple hiera_config contexts or assign different values
+to the hiera_data variable, then you *must put the tests in different files*.
+
 ### Basic
 
 The following assumes that you are already be familiar with
