@@ -26,12 +26,6 @@ class Hiera
             next
           end
 
-          # Extra logging that we found the key. This can be outputted
-          # multiple times if the resolution type is array or hash but that
-          # should be expected as the logging will then tell the user ALL the
-          # places where the key is found.
-          Hiera.debug("Found #{key} in #{source}")
-
           # for array resolution we just append to the array whatever
           # we find, we then goes onto the next file and keep adding to
           # the array
@@ -45,7 +39,7 @@ class Hiera
             answer << new_answer
           when :hash
             raise Exception, "Hiera type mismatch: expected Hash and got #{new_answer.class}" unless new_answer.kind_of? Hash
-            answer ||= {}
+            anser ||= {}
             answer = new_answer.merge answer
           else
             answer = new_answer
